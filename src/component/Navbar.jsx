@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../img/logo-linkedin.svg"
-import { ArrowRight  } from "react-bootstrap-icons"
+import { HouseUp } from "react-bootstrap-icons";
 
 
 export default function NavBar() {
@@ -21,7 +21,7 @@ export default function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="#home">
-                            <ArrowRight  />
+                            <HouseUp/>
                         </Nav.Link>
                         <Nav.Link href="#link">Link</Nav.Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
