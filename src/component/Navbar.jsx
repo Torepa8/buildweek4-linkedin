@@ -29,23 +29,24 @@ export default function NavBar() {
                             <HouseFill className="hicon" />
                             Home
                         </Nav.Link>
-                        <Nav.Link href="#link" className="d-flex flex-column align-items-center">
+                        <Nav.Link href="#rete" className="d-flex flex-column align-items-center">
                             <PeopleFill className="hicon" />
                             Rete
                         </Nav.Link>
-                        <Nav.Link href="#link" className="d-flex flex-column align-items-center">
+                        <Nav.Link href="#jobs" className="d-flex flex-column align-items-center">
                             <FaToolbox className="hicon" />
                             Lavoro
                         </Nav.Link>
-                        <Nav.Link href="#link" className="d-flex flex-column align-items-center">
+                        <Nav.Link href="#message" className="d-flex flex-column align-items-center">
                             <AiFillMessage className="hicon" />
                             Messagistica
                         </Nav.Link>
-                        <Nav.Link href="#link" className="d-flex flex-column align-items-center">
+                        <Nav.Link href="#notify" className="position-relative d-flex flex-column align-items-center">
                             <IoMdNotifications className="hicon" />
                             Notifiche
+                            <div className="position-absolute notify"></div>
                         </Nav.Link>
-                        <Nav.Link href="#link" className="d-flex flex-column align-items-center">
+                        <Nav.Link href="#me" className="d-flex flex-column align-items-center">
                             <BiUserCircle className="hicon" />
                             Tu
                         </Nav.Link>
