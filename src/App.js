@@ -3,13 +3,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Navbar from './component/Navbar';
 import Profile from './component/Profile';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ModalEx from './component/ModalForm'
 
 function App() {
   return (
     <>
       <Navbar />
-      <ModalEx /> {/* modale per l'inserimento delle esperienze lavorative */}
       <Container fluid>
         <Row>
           {/* Feed Principale */}

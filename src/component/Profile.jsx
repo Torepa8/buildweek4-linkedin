@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import { Container, Row, Col, Image, Button } from 'react-bootstrap';
+import { Row, Col, Image, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Assicurati di avere le immagini nella cartella public del tuo progetto React
 import profileImage from '../img/education.png';
 import coverImage from '../img/profile-cover.webp';
 import { BsFillVolumeUpFill } from "react-icons/bs";
 import { BsCheckLg } from 'react-icons/bs';
+import ModalEx from './ModalForm';
 
 export default function Profile() {
     const [isFollowing, setIsFollowing] = useState(false);
@@ -45,7 +46,7 @@ export default function Profile() {
                 <Button variant="primary">Messaggio</Button>{' '}
                 <Button variant="secondary" onClick={handleFollowClick}> 
               {isFollowing ? <BsCheckLg /> : null} Segui</Button>{' '}
-                <Button variant="outline-primary">Altro</Button>
+                <ModalEx variant="outline-primary" />
               </Col>
             </Row>
             </>

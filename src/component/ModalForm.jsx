@@ -12,7 +12,7 @@ function ModalEx() {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Add Experience
       </Button>
 
       <Modal show={show} onHide={handleClose}>
