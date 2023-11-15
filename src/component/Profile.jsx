@@ -21,10 +21,14 @@ export default function Profile() {
           <Row>
           {/* Immagine di copertina */}
             <Image src={coverImage} fluid />
+            <Col>
+              <Image src={profileImage} className='profileImage' style={{marginTop: '-200px'}}/>
+            </Col>
+            
           </Row>
         
-            <Row style={{ marginTop: '-150px', padding: 24}}> 
-            <Image src={profileImage} className='profileImage'/>             
+            <Row style={{padding: 24}}> 
+                         
               <Col xs={12} sm={4} md={3} lg={12}>
                 <Row xs={4}>
                 </Row>
