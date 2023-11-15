@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { Row, Col, Image, Button } from 'react-bootstrap';
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Assicurati di avere le immagini nella cartella public del tuo progetto React
-import profileImage from '../img/education.png';
+import profileImage from '../img/avatar-placeholder.png';
 import coverImage from '../img/profile-cover.webp';
 import { BsFillVolumeUpFill } from "react-icons/bs";
 import { BsCheckLg } from 'react-icons/bs';
@@ -17,18 +17,16 @@ export default function Profile() {
 
     return (
         <>
-        <Row>
-        {/* Immagine di copertina */}
-          <Col md={9} className="profile-section">
+        <Container>
+          <Row>
+          {/* Immagine di copertina */}
             <Image src={coverImage} fluid />
-            </Col>
-        </Row>
+          </Row>
         
-            <Row className="align-items-center">
-              
+            <Row style={{ marginTop: '-150px', padding: 24}}> 
+            <Image src={profileImage} className='profileImage'/>             
               <Col xs={12} sm={4} md={3} lg={12}>
                 <Row xs={4}>
-                <Image border="light" src={profileImage} style={{ width: '2 rem' }} roundedCircle />
                 </Row>
                 
                 <h2>Nome e Cognome Utente <BsFillVolumeUpFill /></h2>
@@ -49,6 +47,7 @@ export default function Profile() {
                 <ModalEx variant="outline-primary" />
               </Col>
             </Row>
+            </Container>
             </>
     );
   }

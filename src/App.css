@@ -22,3 +22,10 @@
   border-radius: 8px;
   padding: 24px !important;
 }
+
+.profileImage {
+  border: 2px solid white;
+  height: 160px;
+  width: 160px;
+  border-radius: 999px;
+}
