@@ -2,6 +2,7 @@ import './App.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Navbar from './component/Navbar';
 import Profile from './component/Profile';
+import Biografia from './component/Biografia';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -11,12 +12,13 @@ function App() {
       <Container fluid>
         <Row>
           {/* Feed Principale */}
-          <Col xs={10}>
+          <Col xs={8}>
             <Profile />
+            <Biografia />
           </Col>
 
           {/* Sidebar */}
-          <Col md={3}>
+          <Col xs={4}>
           {/* Qui inserisci le connessioni e altre informazioni secondarie */}
           </Col>
         </Row>
