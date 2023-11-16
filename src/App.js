@@ -4,9 +4,8 @@ import Navbar from './component/Navbar';
 import Profile from './component/Profile';
 import Biografia from './component/Biografia';
 import Sidebar from './component/Sidebar';
-import SchedaEsperienza from './component/SchedaEsperienza';
-import MyProfile from './me/mecontext'
-import {useState } from 'react';
+//import MyProfile from './me/mecontext'
+//import {useState } from 'react';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -54,7 +53,7 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <MyProfile.Provider value={{ profile, setProfile }}></MyProfile.Provider>
+      {/* <MyProfile.Provider value={{ profile, setProfile }}></MyProfile.Provider> */}
     </>
 
   );
