@@ -1,8 +1,8 @@
-//import { useContext, useEffect } from "react";
-//import MyProfile from "../me/mecontext";
+import { useContext, useEffect } from "react";
+import MyProfile from "../me/mecontext";
 
-//const API = 'https://striveschool-api.herokuapp.com/api/profile/me'
-//const { profile, setProfile } = useContext(MyProfile)
+const API = 'https://striveschool-api.herokuapp.com/api/profile/'
+//const ApiExs='https://striveschool-api.herokuapp.com/api/profile/{_id}/experiences
 // {
 //     "_id": "655268e2c55e7e0018f83cfe",
 //     "name": "Salvatore",
@@ -18,20 +18,23 @@
 //     "__v": 0
 // }
 
-// export default function LoadProfile() {
-//     useEffect(() => (
-//         fetch(API, {
-//             headers: {
-//                 Authorization: process.env.TOKEN
-//             },
-//         })
-//             .then((r) => r.json())
-//             .then(setProfile)
-//             .catch(console.error('Errore Caricamento'))
-//     )
-//         , [])
+export default function LoadProfile({ profile, setProfile }) {
 
-//     return (
-//         console.log(profile)
-//     )
-// }
+    useEffect(() => {
+        if (!profile) {
+            fetch(API, {
+                headers: {
+                    Authorization: process.env.REACT_APP_TOKEN
+                },
+            })
+                .then((r) => r.json())
+                .then(setProfile)
+                .catch(()=> console.error('Errore Caricamento'))
+        }
+    }
+        , [profile])
+
+    return (
+        console.log(profile)
+    )
+}
