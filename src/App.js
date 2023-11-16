@@ -4,13 +4,13 @@ import Navbar from './component/Navbar';
 import Profile from './component/Profile';
 import Biografia from './component/Biografia';
 import Sidebar from './component/Sidebar';
-import MyProfile from './me/mecontext'
-import {useState } from 'react';
+//import MyProfile from './me/mecontext'
+//import {useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [profile, setProfile] = useState()
+  // const [profile, setProfile] = useState()
   return (
     <>
       <Navbar />
@@ -29,7 +29,7 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <MyProfile.Provider value={{ profile, setProfile }}></MyProfile.Provider>
+      {/* <MyProfile.Provider value={{ profile, setProfile }}></MyProfile.Provider> */}
     </>
 
   );
