@@ -1,20 +1,30 @@
 import React from 'react';
-import { Container, Row, Col, Image, Button} from 'react-bootstrap';
+import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Sidebar() {
+export default function Sidebar({ profile }) {
     return (
         <>
-        <Container className='boxContainer'>
+            <Container className='boxContainer'>
+                <Row>
+                    <Col>
+                        <h5>Persone che potresti conoscere</h5>
+                        <p>Dalla scuola o dall'università</p>
+                    </Col>
+                </Row>
+                {profile.map((p) =>
+                    <Row>
+                        <Col>
+                            <Image />
+                            <p>{p.name} {p.surname}</p>
+                            <p>{p.title}</p>
+                            <Button variant="primary">Messaggio</Button>{' '}
+                        </Col>
+                    </Row>
+                )}
             <Row>
                 <Col>
-                    <h5>Persone che potresti conoscere</h5>
-                    <p>Dalla scuola o dall'università</p>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <Image/>
+                    <Image />
                 </Col>
                 <Col>
                     <p>Nome e Cognome</p>
@@ -24,7 +34,7 @@ export default function Sidebar() {
             </Row>
             <Row>
                 <Col>
-                    <Image/>
+                    <Image />
                 </Col>
                 <Col>
                     <p>Nome e Cognome</p>
@@ -32,17 +42,7 @@ export default function Sidebar() {
                     <Button variant="primary">Messaggio</Button>{' '}
                 </Col>
             </Row>
-            <Row>
-                <Col>
-                    <Image/>
-                </Col>
-                <Col>
-                    <p>Nome e Cognome</p>
-                    <p>Ruolo dell'utente</p>
-                    <Button variant="primary">Messaggio</Button>{' '}
-                </Col>
-            </Row>
-        </Container>
+        </Container >
         </>
     );
-    }
+}
