@@ -4,10 +4,13 @@ import Navbar from './component/Navbar';
 import Profile from './component/Profile';
 import Biografia from './component/Biografia';
 import Sidebar from './component/Sidebar';
+import MyProfile from './me/mecontext'
+import {useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [profile, setProfile] = useState()
   return (
     <>
       <Navbar />
@@ -21,11 +24,12 @@ function App() {
 
           {/* Sidebar */}
           <Col xs={4}>
-          {/* Qui inserisci le connessioni e altre informazioni secondarie */}
-          <Sidebar />
+            {/* Qui inserisci le connessioni e altre informazioni secondarie */}
+            <Sidebar />
           </Col>
         </Row>
       </Container>
+      <MyProfile.Provider value={{ profile, setProfile }}></MyProfile.Provider>
     </>
 
   );
