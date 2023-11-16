@@ -4,13 +4,13 @@ import Navbar from './component/Navbar';
 import Profile from './component/Profile';
 import Biografia from './component/Biografia';
 import Sidebar from './component/Sidebar';
-import {useState } from 'react';
-import SchedaEsperienza from './component/SchedaEsperienza';
-
+import SchedaEsperienza from './component/SchedaEsperienza'
 //import MyProfile from './me/mecontext'
+import {useState } from 'react';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoadProfile from './component/LoadProfile';
 
 function App() {
   const [profile, setProfile] = useState()
@@ -18,6 +18,7 @@ function App() {
     <>
       <Navbar />
       <Container fluid>
+        <LoadProfile profile={profile} setProfile={setProfile}/>
         <Row>
           {/* Feed Principale */}
           <Col xs={9}>
