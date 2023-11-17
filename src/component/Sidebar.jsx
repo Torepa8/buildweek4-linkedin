@@ -2,7 +2,9 @@ import React from 'react';
 import { Container, Row, Col, Image, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function Sidebar({ profile }) {
+export default function Sidebar({ profile }) { 
+// Modifichiamo profile in profileList
+
     return (
         <>
             <Container className='boxContainer'>

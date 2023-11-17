@@ -5,6 +5,8 @@ import Profile from './component/Profile';
 import Biografia from './component/Biografia';
 import Sidebar from './component/Sidebar';
 import SchedaEsperienza from './component/SchedaEsperienza'
+import SchedaFormazione from './component/SchedaFormazione'
+
 //import MyProfile from './me/mecontext'
 import {useState } from 'react';
 
@@ -25,11 +27,11 @@ function App() {
             <Profile />
             <Biografia />
             <SchedaEsperienza/>
+            <SchedaFormazione/>
           </Col>
 
           {/* Sidebar */}
           <Col xs={3}>
-            {/* Qui inserisci le connessioni e altre informazioni secondarie */}
             <Sidebar profile={profile} setProfile={setProfile}/>
           </Col>
         </Row>

@@ -16,7 +16,7 @@ export default function Profile() {
 
     return (
         <>
-        <Container>
+        <Container className='boxContainer'>
           <Row>
           {/* Immagine di copertina */}
             <Image src={coverImage} fluid />
@@ -44,9 +44,10 @@ export default function Profile() {
   
             <Row>
               <Col>
-                <Button variant="primary">Messaggio</Button>{' '}
-                <Button variant="secondary" onClick={handleFollowClick}> 
+              <Button variant="primary" onClick={handleFollowClick}> 
               {isFollowing ? <BsCheckLg /> : null} Segui</Button>{' '}
+                <Button variant="primary">Messaggio</Button>{' '}
+                
                 <ModalEx variant="outline-primary" />
               </Col>
             </Row>
