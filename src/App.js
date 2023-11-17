@@ -30,7 +30,9 @@ function App() {
           {/* Sidebar */}
           <Col xs={3}>
             {/* Qui inserisci le connessioni e altre informazioni secondarie */}
-            <Sidebar profile={profile} setProfile={setProfile}/>
+
+            <Sidebar profile={profile}/>
+
           </Col>
         </Row>
       </Container>

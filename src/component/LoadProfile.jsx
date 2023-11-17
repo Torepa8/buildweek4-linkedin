@@ -1,5 +1,5 @@
-import { useContext, useEffect } from "react";
-import MyProfile from "../me/mecontext";
+import { useEffect } from "react";
+// import MyProfile from "../me/mecontext";
 
 const API = 'https://striveschool-api.herokuapp.com/api/profile/'
 //const ApiExs='https://striveschool-api.herokuapp.com/api/profile/{_id}/experiences
@@ -29,10 +29,9 @@ export default function LoadProfile({ profile, setProfile }) {
             })
                 .then((r) => r.json())
                 .then(setProfile)
-                .catch(()=> console.error('Errore Caricamento'))
+                .catch(() => console.error('Errore Caricamento'))
         }
-    }
-        , [profile])
+    }, [profile])
 
     return (
         console.log(profile)
