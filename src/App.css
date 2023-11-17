@@ -21,6 +21,7 @@
   border: 1px solid rgba(203, 203, 203, 0.9);
   border-radius: 8px;
   padding: 24px !important;
+  margin-bottom: 24px;
 }
 
 .profileImage {

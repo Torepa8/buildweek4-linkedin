@@ -13,28 +13,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadProfile from './component/LoadProfile';
 
 function App() {
-  const experiences = [
-    {
-      role: 'Lead Product Designer',
-      company: 'NinjaOne',
-      location: 'Austin, Texas, United States',
-      achievements: [
-        'Contributed across 6 teams within a 600+ person organization.',
-        'Grew a non-existent design function to 3 ICs, a design system and cross-product instrumentation.',
-        // altri punti elenco qui...
-      ],
-    },
-    {
-      role: 'Product Advisor',
-      company: 'Socialwyze',
-      location: 'Dallas, Texas, United States',
-      achievements: [
-        'Our mission was to connect the homeless, formerly incarcerated, veterans, and displaced workers with...',
-        // altri punti elenco qui...
-      ],
-    },
-    // altri oggetti esperienza qui...
-  ];
   const [profile, setProfile] = useState()
   return (
     <>
@@ -43,16 +21,18 @@ function App() {
         <LoadProfile profile={profile} setProfile={setProfile}/>
         <Row>
           {/* Feed Principale */}
-          <Col xs={8}>
+          <Col xs={9}>
             <Profile />
             <Biografia />
-            <SchedaEsperienza experiences={experiences} />
+            <SchedaEsperienza/>
           </Col>
 
           {/* Sidebar */}
-          <Col xs={4}>
+          <Col xs={3}>
             {/* Qui inserisci le connessioni e altre informazioni secondarie */}
+
             <Sidebar profile={profile}/>
+
           </Col>
         </Row>
       </Container>
