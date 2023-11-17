@@ -52,7 +52,7 @@ function App() {
           {/* Sidebar */}
           <Col xs={4}>
             {/* Qui inserisci le connessioni e altre informazioni secondarie */}
-            <Sidebar />
+            <Sidebar profile={profile}/>
           </Col>
         </Row>
       </Container>
