@@ -11,8 +11,8 @@ function ModalEx() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Add Experience
+      <Button variant="primary" onClick={handleShow} style={{fontWeight: 'bold', borderRadius: 999}}>
+        Aggiungi sezione al profilo
       </Button>
 
       <Modal show={show} onHide={handleClose}>

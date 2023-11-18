@@ -14,7 +14,7 @@ export default function Sidebar({ profile }) {
                         <p>Dalla scuola o dall'università</p>
                     </Col>
                 </Row>
-                {profile.map((p) =>
+                {/* {profile.map((p) =>
                     <Row>
                         <Col>
                             <Image />
@@ -23,7 +23,7 @@ export default function Sidebar({ profile }) {
                             <Button variant="primary">Messaggio</Button>{' '}
                         </Col>
                     </Row>
-                )}
+                )} */}
             <Row>
                 <Col>
                     <Image />

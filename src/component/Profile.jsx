@@ -4,24 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import profileImage from '../img/avatar-placeholder.png';
 import coverImage from '../img/profile-cover.webp';
 import { BsFillVolumeUpFill } from "react-icons/bs";
-import { BsCheckLg } from 'react-icons/bs';
 import ModalEx from './ModalForm';
 
 export default function Profile() {
-    const [isFollowing, setIsFollowing] = useState(false);
-
-    const handleFollowClick = () => {
-    setIsFollowing(!isFollowing);
-    };
-
+   
     return (
         <>
         <Container className='boxContainer'>
           <Row>
           {/* Immagine di copertina */}
             <Image src={coverImage} fluid />
-            <Col>
-              <Image src={profileImage} className='profileImage' style={{marginTop: '-200px'}}/>
+            <Col className='px-4'>
+              <Image src={profileImage} className='profileImage' style={{width: 156, marginTop: -124}}/>
             </Col>
             
           </Row>
@@ -35,6 +29,12 @@ export default function Profile() {
                 <h2>Nome e Cognome Utente <BsFillVolumeUpFill /></h2>
                 <h5>Titolo Professionale</h5>
                 <p>Milano, Lombardia, Italia</p>
+                <p className='fw-semibold text-primary'>795 follower • Più di 500 collegamenti</p>
+
+                <Button className='me-1' style={{borderRadius: 999, fontWeight: 'bold'}} variant="primary">Disponibile per</Button>{' '}
+                <ModalEx className='me-1'  variant="outline-primary" />
+                <Button className='ms-2' style={{borderRadius: 999, fontWeight: 'bold'}} variant="outline-secondary">Altro</Button>{' '}
+                               
               </Col>
               
               <Col xs={12} sm={8} md={9} lg={10}>
@@ -44,11 +44,7 @@ export default function Profile() {
   
             <Row>
               <Col>
-              <Button variant="primary" onClick={handleFollowClick}> 
-              {isFollowing ? <BsCheckLg /> : null} Segui</Button>{' '}
-                <Button variant="primary">Messaggio</Button>{' '}
-                
-                <ModalEx variant="outline-primary" />
+              
               </Col>
             </Row>
             </Container>
